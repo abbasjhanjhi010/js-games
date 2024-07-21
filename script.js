@@ -1,3 +1,6 @@
-    console.log("this is how you create \"double  quotation\" inside of the brackets. You just use two \\, each one before the quotation mark that you're going to be using")
-
-    console.log('However, another way of doing this is to just start the mainline with single quotes and then paste a file path for example: "https://www.youtube.com/watch?v=PkZNo7MFNFg"')
+console.log('First method: ')
+console.log("this is how you create \"double  quotation\" inside of the brackets. You just use two \\, each one before the quotation mark that you're going to be using")
+console.log('Second method: ')
+console.log('However, another way of doing this is to just start the mainline with single quotes and then paste a file path for example: "https://www.youtube.com/watch?v=PkZNo7MFNFg"')
+console.log('Third method: ')
+console.log(`the third way of doing this is by placing "backticks" which basically allows you to place both "" and '' inside of the string.`)

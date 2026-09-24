@@ -7,27 +7,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Computer Choice: <span id="computerChoice"></span></h2>
-    <h2>Player Choice: <span id="playerChoice"></span></h2>
 
-    <h2>Result: <span id="result"></span></h2>
+    <header>
+        <label for="tabs"><h1>js Games </h1><span aria-hidden="true">▽</span></label>
+        <select name="tabs" id="tabSelector">
+            <option value="volvo" href="rps.html">Game 1</option>
+            <option value="volvo">Game x</option>
+            <option value="volvo">Game x</option>
+            <option value="volvo">Game x</option>
+            <option value="volvo">Game x</option>
+            <option value="volvo">Game x</option>
+            <option value="volvo">Game x</option>
+        </select>
+    </header>
+    <div class="game">
+        <h2>Computer Choice: <span id="computerChoice"></span></h2>
+        <h2>Player Choice: <span id="playerChoice"></span></h2>
 
-    <button class="rowBtn" id="rock">🪨</button>
-    <button class="rowBtn" id="paper">📃</button>
-    <button class="rowBtn" id="scissor">✂️</button>
+        <h2>Result: <span id="result"></span></h2>
 
-    <!-- tally score, separate from the result given-->
-    <h4>Human: <span id="human"></span></h4>
-    <h4>Computer: <span id="computer"></span></h4>
+        <button class="rowBtn" id="rock">🪨</button>
+        <button class="rowBtn" id="paper">📃</button>
+        <button class="rowBtn" id="scissor">✂️</button>
+
+        <!-- tally score, separate from the result given -->
+        <h4>Human: <span id="human"></span></h4>
+        <h4>Computer: <span id="computer"></span></h4>
+    </div>
 
     <script src="app.js" charset="utf-8"></script>
-</body>
 
-<footer>
+    <footer class="credits">
     <div class="credits">
-        <p>Copyright@ abbasjhanjhi010 on github.com</p>
-        <br>
-        <p>Artwork credit: update this later....</p>
+        <p>Copyright <a href="https://github.com/abbasjhanjhi010">@abbasjhanjhi010</a> on github.com</p>
+        <p><a href="https://github.com/abbasjhanjhi010/js-repository/blob/main/images/README.md">Artwork credits</a></p>
     </div>
 </footer>
+</body>
 </html>

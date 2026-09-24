@@ -15,7 +15,7 @@ body {
     background-color: antiquewhite;
     color: black;
     font-weight: bolder;
-    height: 100dvh;
+    min-height: 100dvh;
     margin: 0;
 }
 
@@ -61,5 +61,10 @@ header {
     font-family: 'Monaspace Neon', monospace;
     margin-top: auto;
 }
+
+
+
+/*comment, doubnle check how it works on the latest git push but doesn't still work for me  */
+
 
 

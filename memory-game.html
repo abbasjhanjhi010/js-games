@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>js Games - Rock, Paper, Scissors</title>
+    <title>js Games- Memory Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,30 +20,22 @@
             <option value="volvo">Game x</option>
         </select>
     </header>
-    <div class="game">
-        <h2>Computer Choice: <span id="computerChoice"></span></h2>
-        <h2>Player Choice: <span id="playerChoice"></span></h2>
 
-        <h2>Result: <span id="result"></span></h2>
+    <h3>Score: <span id="result"></span></h3>
+    <div id="grid"></div>
+    
+    <!-- Main body-->
 
-        <button class="rowBtn" id="rock">🪨</button>
-        <button class="rowBtn" id="paper">📃</button>
-        <button class="rowBtn" id="scissor">✂️</button>
 
-        <!-- tally score, separate from the result given -->
-        <h4>Human: <span id="human"></span></h4>
-        <h4>Computer: <span id="computer"></span></h4>
-    </div>
 
-    <script src="js/app.js" charset="utf-8"></script>
 
     <footer class="credits">
     <div class="credits">
         <p>Copyright © 2026 <a href="https://github.com/abbasjhanjhi010">@abbasjhanjhi010</a> All Rights Reserved</p>
         <p><a href="https://github.com/abbasjhanjhi010/js-repository/blob/main/images/README.md">Artwork credits</a></p>
     </div>
-</footer>
+    </footer>
 
-<script src="js/rps.js" charset="utf-8"></script>
+    <script href="js/mem-game.js"></script>
 </body>
 </html>

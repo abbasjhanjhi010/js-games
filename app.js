@@ -36,45 +36,50 @@ function generateComputerChoice() {
 
 }
 
-function getResult(human, computer) {
-    var resultData = [];
+function getResult() {
+    human = 0
+    computer = 0
     if(computerChoice === playChoice) {
         result = "draw"
-        return resultData 
     }
     if(computerChoice === 'rock' && playChoice === 'scissor') {
         result = "lost"
-        return resultData[1] = 1
+        computer = 1
     }
     if(computerChoice === 'scissor' && playChoice === 'paper') {
         result = "lost"
-        return resultData[1] = 1
+        computer = 1
     }
     if(computerChoice === 'paper' && playChoice === 'rock') {
         result = "lost"
-        return resultData[1] = 1
+        computer = 1
     }
     if(computerChoice === 'scissor' && playChoice === 'rock') {
         result = "win"
-        return resultData[0] = 1
+        console.log("win")
+        human = 1
     }
     if(computerChoice === 'paper' && playChoice === 'scissor') {
         result = "win"
-        return resultData[0] = 1
+        console.log("win")
+        human = 1
     }
     if(computerChoice === 'rock' && playChoice === 'paper') {
         result = "win"
-        return resultData[0] = 1
+        console.log("win")
+        human = 1
     }
     displayResult.innerHTML = result
+    return [human, computer]
 
 }
 
-function tallyresult(humanOutcome, computerOutcome) {
-    humanScore += humanOutcome
-    computerScore += computerOutcome
-    displayHuman.innerHTML = humanScore
-    displayComputer.innerHTML = computerScore
+function tallyresult(outcome) {
+    humanScore += outcome[0]
+    computerScore += outcome[1]
+    
+    displayHuman.innerHTML = humanScore;
+    displayComputer.innerHTML = computerScore;
 }
 
 

@@ -8,3 +8,6 @@ Original Author:
 
 xyz.gif = Sourced from --x--
 Original Author: 
+
+mem-games folder = Sourced from https://github.com/kubowania/memory-game/tree/master/images
+Original Author: Ania Kubow

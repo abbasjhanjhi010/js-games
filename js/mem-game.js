@@ -38,16 +38,24 @@ cardArray.sort(() => 0.5 - Math.random())   // sorts the array randomly - refer 
 const gridDisplay = document.querySelector('#grid')  // the hashtag means its looking for an ID
 console.log(gridDisplay)
 
+
+
 function createBoard () {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < cardArray.length; i++) {
         const card = document.createElement('img')
         card.setAttribute('src', 'images/mem-game/blank.png')
-        console.log(card, i)
+        card.setAttribute('data-id', i)
+        card.addEventListener('click', flipCard())   //if program doesn't work, change to flipCard
+        gridDisplay.appendChild(card)
     }
 }
 
 createBoard()
 
+function flipCard() {
+    const cardId = this.getAttribute('data-id')
+    console.log("clicked", cardId)
+}
 
 
 // explanation by C. Code for cardArray.sort(() => 0.5 - Math.random())

@@ -76,7 +76,12 @@ header {
 
 
 
-/*comment, doubnle check how it works on the latest git push but doesn't still work for me  */
+/*comment, doubnle check how the footer sticky works  */
 
+#grid {
+    flex-wrap: wrap;
+    width: 725px;
+    display: flex;
+}
 
 

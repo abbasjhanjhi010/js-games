@@ -1,6 +1,4 @@
-@import url('https://www.1001fonts.com/star-crush-font.html');   /* header font */
 @import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");   /* body font */ 
-@import url('https://fonts.googleapis.com/css2?family=Monaspace+Neon:wght@400;500;600;700&display=swap');    /* footer font */
 
 
 button{
@@ -22,6 +20,20 @@ body {
 @font-face {
     font-family: 'starCrush';
     src: url('fonts/Star\ Crush.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Monaspace Neon';
+    src: url('fonts/monaspace-neon-latin-600-normal.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Silkscreen';
+    src: url('fonts/Silkscreen-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }

@@ -9,17 +9,15 @@
 <body>
 
     <header>
-        <label for="tabs"><h1><a href="index.html" style="text-decoration: none; color: black;">js Games</a></h1><span aria-hidden="true">▽</span></label>
-        <select name="tabs" id="tabSelector">
-            <option value="volvo" href="rps.html">Game 1</option>
-            <option value="volvo">Game x</option>
-            <option value="volvo">Game x</option>
-            <option value="volvo">Game x</option>
-            <option value="volvo">Game x</option>
-            <option value="volvo">Game x</option>
-            <option value="volvo">Game x</option>
+        <label for="tabSelector"><h1><a href="index.html" style="text-decoration: none; color: black;">js Games</a></h1><span aria-hidden="true">▽</span></label>
+        <select id="tabSelector">
+            <option value="" href="rps.html">Select a Page</option>
+            <option value="index.html">Home</option>
+            <option value="rps.html">Rock, Paper, Scissor</option>
+            <option value="memory-game.html">Memory Game</option>
         </select>
     </header>
+
     <div class="game">
         <h2>Computer Choice: <span id="computerChoice"></span></h2>
         <h2>Player Choice: <span id="playerChoice"></span></h2>
@@ -35,7 +33,7 @@
         <h4>Computer: <span id="computer"></span></h4>
     </div>
 
-    <script src="js/app.js" charset="utf-8"></script>
+    
 
     <footer class="credits">
     <div class="credits">

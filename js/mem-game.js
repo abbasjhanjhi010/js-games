@@ -30,14 +30,50 @@ const cardArray = [
     {
         name: 'white',
         img: 'images/mem-game/white.png'
+    },
+    {
+        name: 'fries',
+        img: 'images/mem-game/fries.png'
+    },
+    {
+        name: 'cheeseburger',
+        img: 'images/mem-game/cheeseburger.png'
+    },
+    {
+        name: 'hotdog',
+        img: 'images/mem-game/hotdog.png'
+    },
+    {
+        name: 'blank',
+        img: 'images/mem-game/blank.png'
+    },
+    {
+        name: 'ice-cream',
+        img: 'images/mem-game/ice-cream.png'
+    },
+    {
+        name: 'milkshake',
+        img: 'images/mem-game/milkshake.png'
+    },
+    {
+        name: 'pizza',
+        img: 'images/mem-game/pizza.png'
+    },
+    {
+        name: 'white',
+        img: 'images/mem-game/white.png'
     }
+    
 ]
 
 cardArray.sort(() => 0.5 - Math.random())   // sorts the array randomly - refer to bottom of document for explanation 
 
 const gridDisplay = document.querySelector('#grid')  // the hashtag means its looking for an ID
-console.log(gridDisplay)
+const scoreDisplay = document.querySelector('#result')
 
+let cardsChosen = []
+let cardsChosenId = []
+const cardsWon = []
 
 
 function createBoard () {
@@ -45,16 +81,64 @@ function createBoard () {
         const card = document.createElement('img')
         card.setAttribute('src', 'images/mem-game/blank.png')
         card.setAttribute('data-id', i)
-        card.addEventListener('click', flipCard())   //if program doesn't work, change to flipCard
+        card.addEventListener('click', flipCard)   //if program doesn't work, change to flipCard
         gridDisplay.appendChild(card)
     }
 }
 
 createBoard()
 
+
+function checkMath() {
+    const cards = document.querySelectorAll('#grid img')  // query selector looks for all images in the id of 'grid'
+    console.log('checking for a match')
+
+    const cardOneId = cardsChosenId[0]
+    const cardtwoId = cardsChosenId[1]
+    let repeating = false;
+    
+    if (cardOneId === cardtwoId) {                          // in the same of clicking the same card twice
+        alert("You clicked on the same card")
+        repeating = true
+    }
+
+    if (cardsChosen[0] == cardsChosen[1] && repeating != true){
+        alert("You found matching cards!")
+        cards[cardOneId].setAttribute('src','images/mem-game/white.png')   // image card turns white once a match is found.
+        cards[cardtwoId].setAttribute('src','images/mem-game/white.png')
+        cards[cardOneId].removeEventListener('click', flipCard)
+        cards[cardtwoId].removeEventListener('click', flipCard)
+        cardsWon.push(cardsChosen)
+    } else {                                            // if no match, then images clicked reverse to cover img 'blank.png'
+        cards[cardOneId].setAttribute('src','images/mem-game/blank.png')
+        cards[cardtwoId].setAttribute('src','images/mem-game/blank.png')
+    }
+    cardsChosen = []
+    cardsChosenId = []
+
+    scoreDisplay.textContent = cardsWon.length       // displays the realtime score of the game
+
+
+    // winning condition 
+    if (cardsWon.length == (cardArray.length/2)) {
+        scoreDisplay.textContent = 'Congrats You Win!!!'
+    }
+}
+
 function flipCard() {
     const cardId = this.getAttribute('data-id')
-    console.log("clicked", cardId)
+    cardsChosen.push(cardArray[cardId].name)        //pushes the NAME (only) of the card clicked into the const variable created called "cardsChosen"
+
+    cardsChosenId.push(cardId)
+    console.log(cardsChosenId)
+    console.log(cardsChosen)
+
+    this.setAttribute('src', cardArray[cardId].img)
+
+
+    if (cardsChosen.length === 2) { 
+        setTimeout(checkMath, 500)
+    }
 }
 
 
